@@ -1,6 +1,5 @@
 class Bike 
-
   def working?
-    "Bike working"
+  "Bike working"
   end
 end
