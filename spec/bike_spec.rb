@@ -5,4 +5,5 @@ describe Bike do
     bike = Bike.new
     expect(bike.working?).to eq("Bike working")
   end
+
 end

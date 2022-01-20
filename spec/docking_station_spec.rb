@@ -3,7 +3,7 @@ require "./lib/docking_station.rb"
 describe DockingStation do
   it "responds to release_bike" do
     docking_station = DockingStation.new
-    expect(docking_station.release_bike).to eq("Bike released")
+    expect(docking_station).to respond_to(:release_bike)
   end
 
   it "I can return bike I'have hired" do
@@ -17,8 +17,7 @@ describe DockingStation do
     expect(docking_station.dock_bike("bike")).to eq("Bike docked")
   end
 
-    it "raises" do
-      expect { raise "No bikes avaliable" }.to raise_error
-    
+  it "raises" do
+    expect { raise "No bikes avaliable" }.to raise_error
   end
 end
